@@ -1,0 +1,14 @@
+[project]
+name = "connectTest"
+version = "0.1.0"
+type = "project"
+
+[dependencies]
+R = ">= 4.6"
+shiny = "*"
+DBI = "*"
+duckdb = "*"
+
+[tool.rig]
+prefer-binary = true
+r-versions = ["4.6.0"]

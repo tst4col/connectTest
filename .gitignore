@@ -1,0 +1,48 @@
+# rig rvenv start
+# Everything in .rvenv is machine-specific output of `rig proj sync`; it can
+# be deleted and rebuilt at any time. The committed rvenv shim package lives
+# in .rvenvlib instead.
+/.rvenv/
+# rig rvenv end
+
+# Local working databases, snapshots, WAL files and exports
+*.duckdb
+*.duckdb.wal
+*.duckdb.tmp/
+*.ddb
+*.wal
+*.partial
+/exports/
+
+# Local R session files
+.Rhistory
+.RData
+.Rproj.user/
+.Renviron.local
+
+# Secrets and private local configuration
+.env
+.env.*
+!.env.example
+.aws/credentials
+.aws/config
+.aws/sso/cache/
+.codex/config.toml
+.codex/auth.json
+.netrc
+.git-credentials
+.ssh/
+id_rsa
+id_ed25519
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local tooling
+__pycache__/
+.venv/
+venv/
+
+# rig-generated, secret-free project bootstrap is intentionally kept
+!.Renviron
