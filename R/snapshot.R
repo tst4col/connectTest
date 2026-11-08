@@ -84,6 +84,9 @@ createSnapshot = function(state, destinationDir = state$exportDir, hooks = list(
   if (isTRUE(state$snapshotBusy)) {
     stop("Es läuft bereits eine Momentaufnahme.", call. = FALSE)
   }
+  if (isTRUE(state$importBusy)) {
+    stop("Während des Imports ist die Momentaufnahme gesperrt.", call. = FALSE)
+  }
   if (is.null(state$conn) || !DBI::dbIsValid(state$conn)) {
     stop("Die Arbeitsdatenbank ist nicht verbunden.", call. = FALSE)
   }

@@ -17,7 +17,9 @@ if (!requireNamespace("rsconnect", quietly = TRUE)) {
 appFiles = c(
   "app.R",
   "R/database.R",
-  "R/snapshot.R"
+  "R/snapshot.R",
+  "R/gate.R",
+  "R/import.R"
 )
 
 missing = appFiles[!file.exists(appFiles)]
